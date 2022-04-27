@@ -6,7 +6,7 @@ const initialFormValues = {
   username: "",
   password: "",
   email: "",
-  checked: false,
+  checkedBox: false,
   accountType:"",
 }
 
@@ -15,7 +15,7 @@ function App() {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const submitHandler = () => {
-    
+
   }
 
   const changeHandler = (name, value) => {

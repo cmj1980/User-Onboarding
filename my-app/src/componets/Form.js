@@ -3,7 +3,7 @@ import React from 'react';
 
 const Form = (props) => {
     const { change, submit } = props;
-    const { username, password, email, checked, accountType } = props.values;
+    const { username, password, email, checkedBox, accountType } = props.values;
 
     const onChange = (evt) => {
          const { name, value, checked, type } = evt.target;
@@ -60,8 +60,8 @@ const Form = (props) => {
                 <label>Argee to our TOS please:
                     <input
                         type="checkbox"
-                        name='tos'
-                        checked={checked}
+                        name='checkedBox'
+                        checked={checkedBox}
                         onChange={onChange}
                     />
                 </label>
