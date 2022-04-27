@@ -3,7 +3,7 @@ import React from 'react';
 
 const Form = (props) => {
     const { change, submit } = props;
-    const { username, email, password, checked, } = props.values;
+    const { username, password, email, checked, accountType } = props.values;
 
     const onChange = (evt) => {
          const { name, value, checked, type } = evt.target;
@@ -45,8 +45,12 @@ const Form = (props) => {
                     />
                 </label>
                 <label>Select Account type
-                     <select name="accounts" id="account-type" required>
-                        <option value="">Choose Account Type</option>
+                     <select 
+                        onChange={onChange}                  
+                         value={accountType}
+                         name="accounts"
+                         required>
+                        <option value="">-Choose Account Type-</option>
                         <option value="checking">Checking</option>
                         <option value="savings">Savings</option>
                         <option value="busisness">Business</option>
