@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Form = (props) => {
-    const { change, submit } = props;
+    const { change, submit, errors } = props;
     const { username, password, email, checkedBox, accountType } = props.values;
 
     const onChange = (evt) => {
@@ -23,7 +23,7 @@ const Form = (props) => {
                <label>Name:
                    <input
                         type="text"
-                        name="name"
+                        name="username"
                         value={username}
                         onChange={onChange}
                         />
@@ -54,6 +54,7 @@ const Form = (props) => {
                         <option value="checking">Checking</option>
                         <option value="savings">Savings</option>
                         <option value="busisness">Business</option>
+                        <option value="auto-loan">Auto Loan</option>
                         <option value="home-loan">Home Loan</option>
                      </select>
                 </label>
@@ -67,6 +68,11 @@ const Form = (props) => {
                 </label>
                 <input type="submit" value="Create Account"/>
             </form>
+            <p>{errors.username}</p>
+            <p>{errors.password}</p>
+            <p>{errors.email}</p>
+            <p>{errors.checkedBox}</p>
+            <p>{errors.accountType}</p>
         </div>
 
     )
