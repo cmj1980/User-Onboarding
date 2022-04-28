@@ -41,7 +41,7 @@ h1 {
   align-content: center;
   background-color: rgba(255, 255, 255, 0.095);
   max-width: 204px;
-  max-height: 550px;
+  max-height: fit-content;
   border: 2px solid rgba(255, 253, 253, 0.339);
   border-radius: 20px;
   justify-content: space-around;
