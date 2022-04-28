@@ -17,11 +17,11 @@ const Form = (props) => {
     }
 
     return (
-        <div>
+        <div className="form-wrapper">
            <h1>Create Account App</h1>
           
            <form name="form" onSubmit={onSubmit}>
-               <label>Name:
+               <label>Username:
                    <input
                         type="text"
                         name="username"
@@ -59,7 +59,7 @@ const Form = (props) => {
                         <option value="home-loan">Home Loan</option>
                      </select>
                 </label>
-                <label>Argee to our TOS please:
+                <label>Terms Of Service:
                     <input
                         type="checkbox"
                         name='checkedBox'

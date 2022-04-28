@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 .App-logo {
@@ -32,17 +35,64 @@ h1 {
   color: white;
 }
 
-form {
+.form-wrapper {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column wrap;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.095);
+  max-width: 204px;
+  max-height: 550px;
+  border: 2px solid rgba(255, 253, 253, 0.339);
+  border-radius: 20px;
+  justify-content: space-around;
+  margin: auto;
+  color: white;
+  padding: 20px;
+ }
+
+
+input[type=text] {
+   border-radius: 20px;
+   border: 2px sold black;
+   padding: 10px;
+   height: 5px;
+   align-content: center;
+
+}
+
+input[type=email] {
+  border-radius: 20px;
+  border: 2px sold black;
+  padding: 10px;
+  height: 5px;
+  align-content: center;
+}
+
+input[type=password] {
+  border-radius: 20px;
+  border: 2px sold black;
+  padding: 10px;
+  height: 5px;
+  align-content: center;
+}
+
+input[type=] {
+ 
+  align-content: center;
 }
 
 input[type=submit] {
   max-width: fit-content;
   align-self: center;
-}
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
 
+}
+ 
+p {
+  color: white;
+}
 
 @keyframes App-logo-spin {
   from {
