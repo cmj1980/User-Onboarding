@@ -67,7 +67,7 @@ const Form = (props) => {
                         onChange={onChange}
                     />
                 </label>
-                <input type="submit" value="Create Account"/>
+                <input id="submitBtn" type="submit" value="Create Account"/>
                 <p>{errors.username}</p>
             <p>{errors.password}</p>
             <p>{errors.email}</p>
