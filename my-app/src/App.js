@@ -60,6 +60,8 @@ function App() {
          return (
          <div key={user.id}>
            <p>{user.username}</p>
+           <p>{user.email}</p>
+           <p>{user.accounts}</p>
            </div> )
        })}
     </div>

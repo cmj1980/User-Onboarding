@@ -36,9 +36,8 @@ form {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-self: flex-start;
-
 }
+
 input[type=submit] {
   max-width: fit-content;
   align-self: center;
