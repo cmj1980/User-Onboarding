@@ -20,7 +20,7 @@ const Form = (props) => {
         <div>
            <h1>Create Account App</h1>
           
-           <form onSubmit={onSubmit}>
+           <form name="form" onSubmit={onSubmit}>
                <label>Name:
                    <input
                         type="text"
