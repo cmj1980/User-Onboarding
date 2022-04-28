@@ -3,27 +3,36 @@ import './App.css';
 import Form from './componets/Form';
 import schema from './formValidation/schemaForm';
 import * as yup from 'yup';
+import axios from 'axios';
 
 const initialFormValues = {
   username: "",
   password: "",
   email: "",
   checkedBox: false,
-  accountType:"",
+  accounts:"",
 }
 const initialFormErrors = {
   username: "",
   password: "",
   email: "",
   checkedBox: "",
-  accountType:"",
+  accounts:"",
 }
 
 function App() {
   const [formValues, setFormValues] = useState(initialFormValues);
-  const [formErrors, setFormErrors] = useState(initialFormErrors)
+  const [formErrors, setFormErrors] = useState(initialFormErrors);
+  const [users, setUsers] = useState([]);
 
   const submitHandler = () => {
+     axios.post("https://reqres.in/api/users", formValues)
+     .then(res => {
+        //console.log(res)
+        setUsers([ res.data, ...users ])
+     })
+     .catch(err => console.error(err))
+     .finally(() => setFormValues(initialFormValues));
 
   }
 
@@ -41,7 +50,18 @@ function App() {
 
   return (
     <div className="App">
-       <Form values={formValues} change={changeHandler} errors={formErrors} />
+       <Form 
+       values={formValues} 
+       change={changeHandler} 
+       errors={formErrors} 
+       submit={submitHandler}
+       />
+       {users.map(user => {
+         return (
+         <div key={user.id}>
+           <p>{user.username}</p>
+           </div> )
+       })}
     </div>
   );
 }

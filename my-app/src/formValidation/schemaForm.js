@@ -19,7 +19,7 @@ const schemaForm = yup.object().shape({
     .oneOf([true], "Must accept Terms of Server to apply"),
     accounts: yup
     .string()
-    .oneOf(["checking", "savings", "business","auto-loan", "home-loan"], "Account Type Required"),
+    
 });
 
 export default schemaForm;

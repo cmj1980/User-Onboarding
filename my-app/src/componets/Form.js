@@ -19,6 +19,7 @@ const Form = (props) => {
     return (
         <div>
            <h1>Create Account App</h1>
+          
            <form onSubmit={onSubmit}>
                <label>Name:
                    <input
@@ -67,12 +68,12 @@ const Form = (props) => {
                     />
                 </label>
                 <input type="submit" value="Create Account"/>
-            </form>
-            <p>{errors.username}</p>
+                <p>{errors.username}</p>
             <p>{errors.password}</p>
             <p>{errors.email}</p>
             <p>{errors.checkedBox}</p>
             <p>{errors.accountType}</p>
+            </form>
         </div>
 
     )
